@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "488882854433",
+    "firebase_url": "https://demofirebase-e512d.firebaseio.com",
+    "project_id": "demofirebase-e512d",
+    "storage_bucket": "demofirebase-e512d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488882854433:android:ad80c43a00b87b64",
+        "android_client_info": {
+          "package_name": "com.lauwba.surelabs.demofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488882854433-3e6mqe9bp79fg7i62ghu21eb15voipld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS6as_mzWMK4RTKHDGglQZXbKdBqoXpGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488882854433-3e6mqe9bp79fg7i62ghu21eb15voipld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
