@@ -38,6 +38,28 @@ class MainActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         insertIntoDatabase()
                     }
+
+                    /*
+                    yang ini buat chek email nya udah ada belum didatabase
+                    * val ref = FirebaseDatabase.getInstance().getReference("user")
+                    ref.orderByChild("email").equalTo(emailKamu.text.toString())
+                        .addListenerForSingleValueEvent(object : ValueEventListener {
+                            override fun onCancelled(p0: DatabaseError) {
+
+                            }
+
+                            override fun onDataChange(p0: DataSnapshot) {
+                                try {
+                                    if (p0.hasChildren()) {
+                                        toast("buatlah email baru. Gampang")
+                                    } else {
+                                        insertIntoDatabase()
+                                    }
+                                } catch (e: Exception) {
+                                    e.printStackTrace()
+                                }
+                            }
+                        })*/
                 }
             }
         }

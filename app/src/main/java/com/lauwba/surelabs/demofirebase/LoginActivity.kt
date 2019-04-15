@@ -9,9 +9,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.pixplicity.easyprefs.library.Prefs
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 
 class LoginActivity : AppCompatActivity() {
 
@@ -19,12 +18,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        checkSession()
+
         login.onClick {
             if (email.text.toString().isEmpty()) {
                 email.error = "Isilah, kalo belum punya daftarlah"
             } else if (password.text.toString().isEmpty()) {
                 password.error = "Isilah,!"
             } else {
+                //daftar createUserWithEmailAndPassword
+                //login signInWithEmailAndPassword
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(email.text.toString(), password.text.toString())
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
@@ -38,6 +41,12 @@ class LoginActivity : AppCompatActivity() {
 
         register.onClick {
             startActivity<MainActivity>()
+        }
+    }
+
+    private fun checkSession() {
+        if (Prefs.contains("email")) {
+            startActivity(intentFor<DashboardActivity>().clearTop().newTask())
         }
     }
 

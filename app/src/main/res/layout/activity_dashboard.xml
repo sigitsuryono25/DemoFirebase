@@ -86,4 +86,24 @@
 
     </LinearLayout>
 
+    <EditText
+            android:id="@+id/namaKamuYangBaru"
+            android:hint="Inputin nama kamu yang baru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editnama"
+            android:text="Ubah Nama"
+    />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logout"
+            android:text="Keluarlah !!"
+    />
+
 </LinearLayout>
